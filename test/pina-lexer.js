@@ -46,7 +46,7 @@ describe("Tests for 'var x = 2;' ", function(){
 
 });
 
-describe("Tests for '5 - 2 = 3' ", function(){
+describe("Tests for '5 - 2 = 3' ", function() {
 
     let pinaLexer = require("../index");
     let tokens = [];
@@ -78,6 +78,30 @@ describe("Tests for '5 - 2 = 3' ", function(){
 
     it("case 6: last token value should be '3'", function () {
         tokens[4].value.should.equal('3');
+    });
+
+});
+
+describe("Tests comment ", function() {
+
+    let pinaLexer = require("../index");
+    let tokens = [];
+    let lexer = new pinaLexer("// this is a comment");
+    let token;
+    while(token = lexer.nextToken()) {
+        tokens.push(token);
+    }
+
+    it("case 1: should have 1 tokens", function () {
+        tokens.should.have.length(1);
+    });
+
+    it("case 2: first token type should be 'COMMENT'", function () {
+        tokens[0].tokenType.should.equal('COMMENT');
+    });
+
+    it("case 3: first token value should be '// this is a comment'", function () {
+        tokens[0].value.should.equal('// this is a comment');
     });
 
 });
