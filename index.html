@@ -27,7 +27,7 @@
         let token;
         while (token = lexer.nextToken()) {
             output.value += "Line: " + token.line +
-                ", Column: " + token.column +
+                ", Position: " + token.position +
                 ", Type: " + token.tokenType +
                 ", Value: \"" + token.value + "\"\n";
         }
