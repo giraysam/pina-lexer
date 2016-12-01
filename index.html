@@ -7,13 +7,31 @@
 </head>
 <body>
 
-<script>
-    const lexer = new PinaLexer("var x = '6.4';\n var y = 3;");
+<p>Input:</p>
+<textarea title="" rows="10" cols="80" id="input"></textarea>
 
-    let token;
-    while (token = lexer.nextToken()) {
-        console.log(token);
-    }
+<p>Output:</p>
+<textarea title="" rows="10" cols="80" id="output"></textarea>
+
+<p><button id="btnToken">Get Tokens</button></p>
+<script>
+    let btnToken = document.querySelector("#btnToken");
+    let input = document.querySelector("#input");
+    let output = document.querySelector("#output");
+
+    btnToken.addEventListener('click', function () {
+        output.value = '';
+
+        let lexer = new PinaLexer(input.value);
+
+        let token;
+        while (token = lexer.nextToken()) {
+            output.value += "Line: " + token.line +
+                ", Column: " + token.column +
+                ", Type: " + token.tokenType +
+                ", Value: \"" + token.value + "\"\n";
+        }
+    });
 
 </script>
 </body>
