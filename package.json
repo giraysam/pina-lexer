@@ -1,0 +1,28 @@
+{
+  "name": "pina-lexer",
+  "version": "0.0.1",
+  "description": "pina-lexer is a library that can be used for tokenizer operations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giraysam/pina-lexer.git"
+  },
+  "keywords": [
+    "pina",
+    "javascript",
+    "lexer"
+  ],
+  "author": "giraysam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giraysam/pina-lexer/issues"
+  },
+  "homepage": "https://github.com/giraysam/pina-lexer",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "chai": "^3.5.0"
+  }
+}
