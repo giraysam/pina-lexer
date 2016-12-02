@@ -16,7 +16,7 @@ describe("Tests for 'var x = 2;' ", function(){
 
     it("Should be able to require pinaLexer as function", function () {
 
-        assert(pinaLexer.default.DefaultLexer);
+        assert(pinaLexer.default.Lexer);
         assert(typeof(pinaLexer.default.Lexer), "function");
     });
 

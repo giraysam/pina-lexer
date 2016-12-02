@@ -1,2 +1,2 @@
 module.exports = require('./lib/pina-lexer');
-module.exports = require('./lib/pina-lexer-javascript');
+// module.exports = require('./lib/pina-lexer-javascript');
