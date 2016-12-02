@@ -8,7 +8,7 @@ describe("Tests for 'var x = 2;' ", function(){
 
     let pinaLexer = require("../index");
     let tokens = [];
-    let lexer = new pinaLexer.default.DefaultLexer("var x = 2;");
+    let lexer = new pinaLexer.default.Lexer("var x = 2;");
     let token;
     while(token = lexer.nextToken()) {
         tokens.push(token);
@@ -17,7 +17,7 @@ describe("Tests for 'var x = 2;' ", function(){
     it("Should be able to require pinaLexer as function", function () {
 
         assert(pinaLexer.default.DefaultLexer);
-        assert(typeof(pinaLexer.default.DefaultLexer), "function");
+        assert(typeof(pinaLexer.default.Lexer), "function");
     });
 
     it("case 1: should have 5 tokens", function () {
@@ -50,7 +50,7 @@ describe("Tests for '5 - 2 = 3' ", function() {
 
     let pinaLexer = require("../index");
     let tokens = [];
-    let lexer = new pinaLexer.default.DefaultLexer("5 - 2 = 3");
+    let lexer = new pinaLexer.default.Lexer("5 - 2 = 3");
     let token;
     while(token = lexer.nextToken()) {
         tokens.push(token);
@@ -86,7 +86,7 @@ describe("Tests comment ", function() {
 
     let pinaLexer = require("../index");
     let tokens = [];
-    let lexer = new pinaLexer.default.DefaultLexer("// this is a comment");
+    let lexer = new pinaLexer.default.Lexer("// this is a comment");
     let token;
     while(token = lexer.nextToken()) {
         tokens.push(token);
