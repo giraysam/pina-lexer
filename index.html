@@ -22,7 +22,7 @@
     btnToken.addEventListener('click', function () {
         output.value = '';
 
-        let lexer = new PinaLexer(input.value);
+        let lexer = new PinaLexer.default.DefaultLexer(input.value);
 
         let token;
         while (token = lexer.nextToken()) {
